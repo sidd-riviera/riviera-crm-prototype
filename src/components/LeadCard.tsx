@@ -213,7 +213,7 @@ export default function LeadCard({
                             </button>
                             <button
                                 onClick={handleFinalApprove}
-                                className="px-4 py-3 rounded-xl bg-primary hover:bg-primary/90 text-white text-sm font-semibold transition-colors flex-[2] shadow-md shadow-primary/20"
+                                className="px-4 py-3 rounded-xl border border-border/50 bg-card hover:bg-muted text-foreground text-sm font-semibold transition-colors flex-[2] shadow-sm"
                             >
                                 Approve & Send
                             </button>
