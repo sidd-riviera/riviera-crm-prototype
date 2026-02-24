@@ -114,7 +114,7 @@ export default function InsightsTab() {
                                     ))}
                                 </Pie>
                                 <Tooltip
-                                    formatter={(value: number | undefined, name: string) => {
+                                    formatter={(value: any, name: any) => {
                                         const val = value || 0;
                                         const total = chartData.reduce((sum, item) => sum + item.value, 0);
                                         const percent = total > 0 ? ((val / total) * 100).toFixed(0) : "0";

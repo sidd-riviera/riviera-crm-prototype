@@ -10,6 +10,8 @@ export interface Lead {
     dimension?: "Patient Outcome" | "Trust & Authority" | "Value Position" | string;
     gradient?: string;
     autoDraftReply?: string;
+    specialty?: string;
+    urgency?: string;
 }
 
 interface LeadCardProps {
