@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, useAnimation, PanInfo } from "framer-motion";
+import RivieraLogo from "@/components/RivieraLogo";
 
 export interface Lead {
     id: string;
@@ -190,9 +191,7 @@ export default function LeadCard({
                         <div>
                             <div className="flex items-center gap-2 mb-6">
                                 <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
-                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                                    </svg>
+                                    <RivieraLogo className="w-4 h-4 text-primary" />
                                 </div>
                                 <span className="text-xs font-bold uppercase tracking-widest text-primary">AI Auto-Draft</span>
                             </div>
@@ -213,7 +212,7 @@ export default function LeadCard({
                             </button>
                             <button
                                 onClick={handleFinalApprove}
-                                className="px-4 py-3 rounded-xl border border-border/50 bg-card hover:bg-muted text-foreground text-sm font-semibold transition-colors flex-[2] shadow-sm"
+                                className="px-4 py-3 rounded-xl border border-border/50 bg-card hover:bg-muted text-foreground text-sm font-semibold transition-colors flex-1 shadow-sm"
                             >
                                 Approve & Send
                             </button>
