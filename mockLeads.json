@@ -1,0 +1,122 @@
+[
+    {
+        "id": "1",
+        "name": "Sarah Jenkins",
+        "dimension": "Patient Outcome",
+        "gradient": "from-red-500 to-orange-400",
+        "inquiry": "Hi, I am on day 4 post-op from my rhinoplasty and the swelling seems worse today. Is this normal?",
+        "autoDraftReply": "Hi Sarah, some fluctuating swelling is completely normal on day 4, but Dr. Kaniff always wants to be certain you are healing perfectly. Can you send a quick photo, or would you like to pop in at 3:15 PM today for a quick visual check?"
+    },
+    {
+        "id": "2",
+        "name": "David Chen",
+        "dimension": "Patient Outcome",
+        "gradient": "from-red-500 to-orange-400",
+        "inquiry": "My JP drain output increased slightly this morning after my tummy tuck. Fluid is darker red now. Should I be concerned?",
+        "autoDraftReply": "Hi David, slight increases in output and color shifts to red can happen with increased activity, but we always monitor this closely. Please check your temperature and reply with the exact cc output from your latest log. Our clinical team is reviewing your chart now and we will call you in 10 minutes."
+    },
+    {
+        "id": "3",
+        "name": "Amanda Pires",
+        "dimension": "Patient Outcome",
+        "gradient": "from-red-500 to-orange-400",
+        "inquiry": "I'm feeling very nauseous after taking the prescribed pain medication for my breast augmentation. Can I switch to something else?",
+        "autoDraftReply": "Hi Amanda, I am sorry you are feeling nauseous! Post-operative nausea is a common side effect of the narcotic. Please immediately stop taking it and switch to Tylenol. I've sent a prescription for Zofran to your pharmacy on file to help settle your stomach. Please drink clear fluids and let us know how you feel in an hour."
+    },
+    {
+        "id": "4",
+        "name": "Elena Rostova",
+        "dimension": "Trust & Authority",
+        "gradient": "from-purple-500 to-pink-500",
+        "inquiry": "I am interested in a Mommy Makeover consultation. Can you send me Dr. Kaniff's board certifications and some specific before/after galleries?",
+        "autoDraftReply": "Hi Elena! Dr. Kaniff is double board-certified and specializes in Mommy Makeovers. I have attached a link to his specific credential packet and a private gallery of patients with similar body types to yours. Would you like to schedule a virtual consultation to discuss your specific goals?"
+    },
+    {
+        "id": "5",
+        "name": "Sophia Reynolds",
+        "dimension": "Trust & Authority",
+        "gradient": "from-purple-500 to-pink-500",
+        "inquiry": "I'm looking into a deep-plane facelift. Does the surgeon perform this frequently, and what is their exact technique compared to a SMAS lift?",
+        "autoDraftReply": "Hi Sophia. Yes, Dr. Kaniff performs deep-plane facelifts weekly and considers it a signature procedure. Unlike a SMAS lift which pulls tension on the skin, the deep-plane technique releases the ligaments to elevate the entire muscle layer, resulting in a much more natural, tension-free finish that lasts longer. I'm attaching his published whitepaper on the technique. Shall we schedule a consult?"
+    },
+    {
+        "id": "6",
+        "name": "Michael Thorne",
+        "dimension": "Trust & Authority",
+        "gradient": "from-purple-500 to-pink-500",
+        "inquiry": "As an out-of-state patient, I need reassurance about your surgical facility. Is it an accredited surgery center or just an office room?",
+        "autoDraftReply": "Hi Michael, safety is our absolute priority. Our surgeries are performed in our private, fully AAAASF-accredited surgical suite. We utilize board-certified MD Anesthesiologists exclusively—never CRNAs. I have attached our facility accreditation certificate and info on our out-of-state patient concierge recovery protocol."
+    },
+    {
+        "id": "7",
+        "name": "Jessica Albright",
+        "dimension": "Trust & Authority",
+        "gradient": "from-purple-500 to-pink-500",
+        "inquiry": "I had a botched fillers job elsewhere and am very nervous. Can the doctor confidently dissolve and correct tear troughs without causing festoons?",
+        "autoDraftReply": "Hi Jessica, we understand your hesitation. Dr. Kaniff acts as a corrective specialist for complex filler cases. He uses ultrasound guidance to precisely target and dissolve misplaced filler via Hylenex before attempting any conservative reinjection. Let's schedule a clinical assessment so he can evaluate the severity and outline a safe correction plan."
+    },
+    {
+        "id": "8",
+        "name": "Marcus Webb",
+        "dimension": "Value Position",
+        "gradient": "from-blue-400 to-emerald-400",
+        "inquiry": "Can you send over the pricing breakdown and CareCredit financing options for liposuction?",
+        "autoDraftReply": "Hi Marcus, liposuction packages are highly customized based on the specific areas treated, but generally range from $X to $Y. We do accept CareCredit with 0% financing for 12 months. The best way to get an exact quote is a brief consultation—should I look at the schedule for next Tuesday?"
+    },
+    {
+        "id": "9",
+        "name": "Linda Vance",
+        "dimension": "Value Position",
+        "gradient": "from-blue-400 to-emerald-400",
+        "inquiry": "Does the breast augmentation quote include the anesthesiologist and operating room fees, or are those billed separately?",
+        "autoDraftReply": "Hi Linda, excellent question. We believe in complete transparency, so our surgical quotes are entirely all-inclusive. The fee covers the surgeon's fee, the board-certified MD anesthesiologist, facility fees, your silicone implants, post-op garments, and all follow-up appointments. There are no hidden costs. Would you like me to send a sample breakdown?"
+    },
+    {
+        "id": "10",
+        "name": "Isabella Cortez",
+        "dimension": "Value Position",
+        "gradient": "from-blue-400 to-emerald-400",
+        "inquiry": "Are you running any specials on Botox or Morpheus8 treatments this month?",
+        "autoDraftReply": "Hi Isabella! Yes, we have a 'Summer Prep' promotion running through the end of the month. If you book a package of 3 Morpheus8 sessions, we include 40 units of preventative Botox complimentary. Spaces are booking quickly—would you like me to hold a slot for you next week?"
+    },
+    {
+        "id": "11",
+        "name": "Brian Kincaid",
+        "dimension": "Value Position",
+        "gradient": "from-blue-400 to-emerald-400",
+        "inquiry": "How much is a consultation for a hair transplant, and does that fee go toward the surgery cost?",
+        "autoDraftReply": "Hi Brian, Dr. Kaniff's comprehensive hair restoration consultation is $150. This covers a detailed scalp analysis and customized graft mapping. Yes, if you decide to proceed with the surgery, that $150 fee is applied directly toward your final procedure balance. Should we find a time on the calendar?"
+    },
+    {
+        "id": "12",
+        "name": "Chloe Vance",
+        "dimension": "Routine Scheduling",
+        "gradient": "from-gray-100 to-gray-300",
+        "inquiry": "Confirming my preventative Botox appointment for Thursday at 2 PM.",
+        "autoDraftReply": "Hi Chloe, you are all set for Thursday at 2 PM! Please remember to avoid blood thinners 24 hours prior. See you soon!"
+    },
+    {
+        "id": "13",
+        "name": "Peter Sullivan",
+        "dimension": "Routine Scheduling",
+        "gradient": "from-gray-100 to-gray-300",
+        "inquiry": "I am stuck in traffic on the 405 and might be 10 minutes late to my post-op checkup.",
+        "autoDraftReply": "Hi Peter, thank you for letting us know! Drive safely. A 10-minute delay is totally fine, we have noted your chart and the clinical team will be ready for you."
+    },
+    {
+        "id": "14",
+        "name": "Valerie Jones",
+        "dimension": "Routine Scheduling",
+        "gradient": "from-gray-100 to-gray-300",
+        "inquiry": "I need to reschedule my consultation from next Monday to anytime on Wednesday afternoon.",
+        "autoDraftReply": "Hi Valerie, not a problem at all. I have canceled Monday and moved you to Wednesday at 2:30 PM. Let me know if that specific time works, otherwise I also have a 4:00 PM available."
+    },
+    {
+        "id": "15",
+        "name": "Tom Harris",
+        "dimension": "Routine Scheduling",
+        "gradient": "from-gray-100 to-gray-300",
+        "inquiry": "I can't log into the patient portal to sign the pre-op consent forms. The password reset isn't sending an email.",
+        "autoDraftReply": "Hi Tom, sorry about that! Let me manually trigger a reset link for you right now directly from our system. If you still don't see it in the next 5 minutes (check spam), reply here and I'll walk you through an alternative."
+    }
+]
