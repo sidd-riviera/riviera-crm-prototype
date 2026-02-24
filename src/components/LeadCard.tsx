@@ -147,18 +147,35 @@ export default function LeadCard({
 
                     {isFront && (
                         <div className="flex justify-between items-center text-[11px] font-bold uppercase tracking-widest px-2 mt-auto text-muted-foreground/60 pb-2">
-                            <span className="inline-flex flex-col items-center gap-2">
+                            <button
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    controls.start({ x: 0, y: -200, opacity: 0, scale: 0.9, transition: { duration: 0.4, ease: "easeOut" } }).then(() => {
+                                        onArchive?.();
+                                    });
+                                }}
+                                className="inline-flex flex-col items-center gap-2 hover:text-rose-500 transition-colors cursor-pointer"
+                            >
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-rose-500/50">
                                     <path d="M19 12H5M12 19l-7-7 7-7" />
                                 </svg>
                                 Archive
-                            </span>
-                            <span className="inline-flex flex-col items-center gap-2">
+                            </button>
+                            <button
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    controls.start({ x: 0, y: 0, scale: 1, transition: { type: "spring", stiffness: 400, damping: 25 } }).then(() => {
+                                        setReviewMode(true);
+                                        onReviewChange?.(lead.id, true);
+                                    });
+                                }}
+                                className="inline-flex flex-col items-center gap-2 hover:text-emerald-500 transition-colors cursor-pointer"
+                            >
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-emerald-500/50">
                                     <path d="M5 12h14M12 5l7 7-7 7" />
                                 </svg>
                                 AI Draft
-                            </span>
+                            </button>
                         </div>
                     )}
                 </div>
