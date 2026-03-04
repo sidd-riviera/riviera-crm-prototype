@@ -121,6 +121,36 @@ export default function DesktopWorkspace() {
                             <div className="flex flex-col md:flex-row items-center justify-center gap-8 w-full max-w-3xl mx-auto px-4">
                                 {/* Left (or Center): Card Stack Container */}
                                 <div className="relative w-full max-w-sm aspect-[4/5] h-[420px] flex items-center justify-center shrink-0">
+                                    {/* Remaining Cards Indicator */}
+                                    <AnimatePresence>
+                                        {leads.length > 0 && (
+                                            <motion.div
+                                                initial={{ opacity: 0, y: 10 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                exit={{ opacity: 0, scale: 0.9 }}
+                                                className="absolute -top-12 left-1/2 -translate-x-1/2 z-0"
+                                            >
+                                                <div className="bg-gray-100/80 dark:bg-zinc-800/80 backdrop-blur-md border border-gray-200 dark:border-zinc-700 rounded-full px-3 py-1 flex items-center shadow-sm">
+                                                    <span className="text-xs text-gray-500 dark:text-zinc-400 font-medium tracking-wide flex items-center gap-1">
+                                                        <AnimatePresence mode="popLayout">
+                                                            <motion.span
+                                                                key={leads.length}
+                                                                initial={{ opacity: 0, y: -8 }}
+                                                                animate={{ opacity: 1, y: 0 }}
+                                                                exit={{ opacity: 0, y: 8 }}
+                                                                transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                                                                className="inline-block text-gray-700 dark:text-zinc-300 font-bold"
+                                                            >
+                                                                {leads.length}
+                                                            </motion.span>
+                                                        </AnimatePresence>
+                                                        remaining
+                                                    </span>
+                                                </div>
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
+
                                     <AnimatePresence>
                                         {leads.slice(0, 4).reverse().map((lead) => {
                                             const index = leads.indexOf(lead);

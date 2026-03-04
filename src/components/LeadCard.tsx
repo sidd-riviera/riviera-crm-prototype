@@ -37,6 +37,11 @@ export default function LeadCard({
     const controls = useAnimation();
     const [reviewMode, setReviewMode] = useState(false);
 
+    useEffect(() => {
+        // Animate the card into view when it mounts as the active lead
+        controls.start({ x: 0, y: 0, opacity: 1, transition: { type: "spring", stiffness: 350, damping: 25 } });
+    }, [controls, lead.id]);
+
     // Sync external keyboard actions from page.tsx
     useEffect(() => {
         if (!isFront || cardAction?.id !== lead.id) return;
@@ -51,12 +56,12 @@ export default function LeadCard({
                 }
                 break;
             case "archive":
-                controls.start({ x: 0, y: -200, opacity: 0, scale: 0.9, transition: { duration: 0.4, ease: "easeOut" } }).then(() => {
+                controls.start({ x: 0, y: -200, opacity: 0, transition: { duration: 0.4, ease: "easeOut" } }).then(() => {
                     onArchive?.();
                 });
                 break;
             case "approve":
-                controls.start({ x: 200, y: -50, opacity: 0, scale: 0.9, transition: { duration: 0.4, ease: "easeOut" } }).then(() => {
+                controls.start({ x: 200, y: -50, opacity: 0, transition: { duration: 0.4, ease: "easeOut" } }).then(() => {
                     onApprove?.();
                     onReviewChange?.(lead.id, false);
                 });
@@ -75,18 +80,18 @@ export default function LeadCard({
 
         if (info.offset.x > 120) {
             // Dragged right: Flip into Auto-Draft review state
-            controls.start({ x: 0, y: 0, scale: 1, transition: { type: "spring", stiffness: 400, damping: 25 } }).then(() => {
+            controls.start({ x: 0, y: 0, transition: { type: "spring", stiffness: 400, damping: 25 } }).then(() => {
                 setReviewMode(true);
                 onReviewChange?.(lead.id, true);
             });
         } else if (info.offset.x < -120) {
             // Dragged left: Archive (float upward)
-            controls.start({ x: 0, y: -200, opacity: 0, scale: 0.9, transition: { duration: 0.4, ease: "easeOut" } }).then(() => {
+            controls.start({ x: 0, y: -200, opacity: 0, transition: { duration: 0.4, ease: "easeOut" } }).then(() => {
                 onArchive?.();
             });
         } else {
             // Snap back if not dragged far enough
-            controls.start({ x: 0, y: 0, opacity: 1, scale: 1, transition: { type: "spring", stiffness: 400, damping: 15 } });
+            controls.start({ x: 0, y: 0, opacity: 1, transition: { type: "spring", stiffness: 400, damping: 15 } });
         }
     };
 
@@ -96,7 +101,7 @@ export default function LeadCard({
     };
 
     const handleFinalApprove = () => {
-        controls.start({ x: 200, y: -50, opacity: 0, scale: 0.9, transition: { duration: 0.4, ease: "easeOut" } }).then(() => {
+        controls.start({ x: 200, y: -50, opacity: 0, transition: { duration: 0.4, ease: "easeOut" } }).then(() => {
             onApprove?.();
             onReviewChange?.(lead.id, false);
         });
@@ -112,15 +117,14 @@ export default function LeadCard({
             dragElastic={0.8}
             onDragEnd={handleDragEnd}
             animate={controls}
-            initial={false}
+            initial={{ opacity: 0, y: 24 }}
             style={{
-                zIndex: 100 - index,
-                scale: 1 - index * 0.05,
-                y: index * 15,
+                zIndex: 10 - index,
+                y: index * 24,
             }}
-            whileHover={isFront && !reviewMode ? { scale: 1.02 } : {}}
-            whileTap={isFront && !reviewMode ? { scale: 0.98 } : {}}
-            className={`absolute w-full max-w-[340px] h-[420px] rounded-2xl bg-gradient-to-br ${cardGradient} border border-border/40 shadow-xl dark:shadow-black/40 ${isFront && !reviewMode ? 'cursor-grab active:cursor-grabbing' : ''} origin-top flex flex-col justify-between overflow-hidden`}
+            whileHover={isFront && !reviewMode ? { y: -2 } : {}}
+            whileTap={isFront && !reviewMode ? { y: 2 } : {}}
+            className={`absolute w-full max-w-[340px] h-[420px] rounded-2xl bg-gradient-to-br ${cardGradient} border border-white/40 dark:border-white/10 shadow-lg dark:shadow-black/70 ${isFront && !reviewMode ? 'cursor-grab active:cursor-grabbing' : ''} origin-top flex flex-col justify-between overflow-hidden`}
         >
             <div className="w-full h-full p-6 flex flex-col relative z-20 bg-background shadow-inner rounded-xl m-1 absolute inset-1 max-w-[calc(100%-8px)] max-h-[calc(100%-8px)]">
 
@@ -151,7 +155,7 @@ export default function LeadCard({
                             <button
                                 onClick={(e) => {
                                     e.stopPropagation();
-                                    controls.start({ x: 0, y: -200, opacity: 0, scale: 0.9, transition: { duration: 0.4, ease: "easeOut" } }).then(() => {
+                                    controls.start({ x: 0, y: -200, opacity: 0, transition: { duration: 0.4, ease: "easeOut" } }).then(() => {
                                         onArchive?.();
                                     });
                                 }}
@@ -165,7 +169,7 @@ export default function LeadCard({
                             <button
                                 onClick={(e) => {
                                     e.stopPropagation();
-                                    controls.start({ x: 0, y: 0, scale: 1, transition: { type: "spring", stiffness: 400, damping: 25 } }).then(() => {
+                                    controls.start({ x: 0, y: 0, transition: { type: "spring", stiffness: 400, damping: 25 } }).then(() => {
                                         setReviewMode(true);
                                         onReviewChange?.(lead.id, true);
                                     });
